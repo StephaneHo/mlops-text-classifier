@@ -1,4 +1,4 @@
-# Project of classification, based on a scholar project
+# Projet de classification, basé sur un projet soclaire
 
 
 
@@ -13,12 +13,18 @@ Sert à créer un modèle Pydantic pour consolider le modèle de données
 
 
 
-# To launch:
+# Pour lancer l'application
 
-## Install dependencies
+## Installer les dependences
 uv sync
+
+## Entrainer le modèle
+python train.py
 
 ## Lancer un serveur web ASGI pour l'API FastAPI.
 uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+la page http://localhost:8000/docs#/ doit alors etre disponible avec les API
+(FastAPI sert automatiquement Swagger UI) 
 
 
