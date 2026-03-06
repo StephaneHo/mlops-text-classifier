@@ -12,7 +12,15 @@ mlflow.set_tracking_uri("http://89.58.44.97:5000/")
 
 mlflow.set_experiment("iris_classification")
 
+iris = load_iris()
+print(iris.target_names)
+
 X, y = load_iris(return_X_y=True)
+# print some example of the dataset:
+print("Exemples of the dataset :")
+print(X[0:5])
+print(y[0:5])
+
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
